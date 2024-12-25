@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ cloth.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ cloth.title }}</h1>
+        <section>
+            <p>{{ cloth.description }}</p>
+            <p>{{ cloth.title }}</p>
+            <img src="{{ cloth.image.url }}" alt="{{ cloth.title }}">
+        </section>
+{% endblock %}

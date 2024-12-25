@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Man's Colection
+{% endblock %}
+
+{% block content %}
+    <h1>Man's Colection</h1>
+    <section>
+        {% for cloth in clothes %}
+            <h2>
+                <a href="{% url 'clothes:item' slug=cloth.slug %}">
+                    {{ cloth.title }}
+                </a>
+            </h2>
+            <p>{{ cloth.description }}</p>
+            <p>{{ cloth.title }}</p>
+        {% endfor %}
+    </section>
+{% endblock %}
